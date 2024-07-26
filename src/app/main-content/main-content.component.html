@@ -1,0 +1,12 @@
+<section>
+  @for(post of (allPosts$ | async); track post; let index = $index){
+    <div>
+      <p>{{index}}: {{post.name}}</p>
+      <img src="{{post.img}}"alt="{{post.name}}">
+      <p class="like-container"><img class="no-like" src="../../assets/img/heart-black.png" alt="no like"> {{post.like.length}}</p>
+    </div>
+    <!-- <app-post [post]="post"></app-post> -->
+  }
+</section>
+
+
