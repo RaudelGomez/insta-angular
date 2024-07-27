@@ -1,5 +1,12 @@
 <section>
-  <p>1: Nadine</p>
-  <img src="../../../assets/img/banana.jpg" alt="banana">
-  <p>like: 97</p>
+    <p>{{index}}: {{post.name}}</p>
+    <img src="{{post.img}}"alt="{{post.name}}">
+    <p class="like-container">
+      @if(hasLiked(index) >= 0){
+        <img class="hearth" (click)="addLike(index)" src="../../assets/img/heart-red.png" alt="liked">
+      } @else{
+        <img class="hearth" (click)="addLike(index)" src="../../assets/img/heart-black.png" alt="no like">
+         
+      }
+    {{post.like.length}}</p>
 </section>

@@ -1,10 +1,19 @@
-section{
-  margin-bottom: 16px;
-  p{
-    margin: 2px;
-  }
-  img{
-    width:200px;
-    height: 300px;
-  }
+section {
+	margin-bottom: 16px;
+	p {
+		margin: 2px;
+	}
+	> img {
+		width: 200px;
+		height: 200px;
+	}
+}
+
+.hearth {
+	width: 24px;
+}
+
+.like-container {
+	display: flex;
+	align-items: center;
 }

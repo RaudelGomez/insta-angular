@@ -1,7 +1,7 @@
 <section>
   <article>
     @for(post of (allPosts$ | async); track post; let index = $index){
-      <div>
+      <!-- <div>
         <p>{{index}}: {{post.name}}</p>
         <img src="{{post.img}}"alt="{{post.name}}">
         <p class="like-container">
@@ -12,9 +12,9 @@
              
           }
         {{post.like.length}}</p>
-      </div>
+      </div> -->
+      <app-post [post]="post" [index]="index"></app-post>
     }
-      <!-- <app-post [posts]="allPosts$"></app-post> -->
   </article>
 </section>
 

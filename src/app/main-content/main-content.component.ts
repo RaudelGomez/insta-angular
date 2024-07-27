@@ -15,24 +15,9 @@ import { filter, Observable } from 'rxjs';
 export class MainContentComponent {
 
   allPosts$: Observable<Post[]> = this.postService.allPosts;
-  //userLogged: string;
   
   constructor( private postService: PostService){
-    // this.userLogged = this.postService.userLogged;
-    // console.log(this.postService.hasThePostLike(0));
+    
   }
-
-  addLike(index: number){
-    this.postService.addLike(index);
-    //console.log(this.allPosts$);
-  }
-
-  hasLiked(index:number){
-    return this.postService.hasThePostLike(index);
-  }
-
-
-  
-
   
 }
