@@ -49,6 +49,7 @@ export class PostService {
     }else{
       this.posts[index].like.push(this.user);
     }
+    this.posts$.next(this.posts);
   }
 
   hasThePostLike(index:number){
