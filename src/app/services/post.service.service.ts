@@ -10,20 +10,20 @@ export class PostService {
 
   private posts: Post[] = [
     {
-          name: "Hans",
-          img: "./assets/img/banana.jpg",
-          like: ["Raudel"]
-        },
-        {
-          name: "Mandy",
-          img: "./assets/img/orange.jpg",
-          like: ["Pepe", "Robert"]
-        },
-        {
-          name: "Nadine",
-          img: "./assets/img/currant.jpg",
-          like: []
-        },
+      name: "Hans",
+      img: "./assets/img/banana.jpg",
+      like: ["Raudel"]
+    },
+    {
+      name: "Mandy",
+      img: "./assets/img/orange.jpg",
+      like: ["Pepe", "Robert"]
+    },
+    {
+      name: "Nadine",
+      img: "./assets/img/currant.jpg",
+      like: []
+    },
   ];
 
   private posts$: BehaviorSubject<Post[]> ;

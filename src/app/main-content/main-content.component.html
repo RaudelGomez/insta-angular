@@ -1,21 +1,10 @@
 <section>
   <article>
     @for(post of (allPosts$ | async); track post; let index = $index){
-      <!-- <div>
-        <p>{{index}}: {{post.name}}</p>
-        <img src="{{post.img}}"alt="{{post.name}}">
-        <p class="like-container">
-          @if(hasLiked(index) >= 0){
-            <img class="hearth" (click)="addLike(index)" src="../../assets/img/heart-red.png" alt="liked">
-          } @else{
-            <img class="hearth" (click)="addLike(index)" src="../../assets/img/heart-black.png" alt="no like">
-             
-          }
-        {{post.like.length}}</p>
-      </div> -->
       <app-post [post]="post" [index]="index"></app-post>
     }
   </article>
+  <a routerLink="contact">zu contact Link</a>
 </section>
 
 

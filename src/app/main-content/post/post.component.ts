@@ -19,7 +19,7 @@ export class PostComponent {
 
   constructor( private postService: PostService){ }
 
-  addLike(index: number){
+  toggleLike(index: number){
     this.postService.addLike(index);
     //console.log(this.allPosts$);
   }

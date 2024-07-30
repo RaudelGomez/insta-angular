@@ -3,10 +3,9 @@
     <img src="{{post.img}}"alt="{{post.name}}">
     <p class="like-container">
       @if(hasLiked(index) >= 0){
-        <img class="hearth" (click)="addLike(index)" src="../../assets/img/heart-red.png" alt="liked">
+        <img class="hearth" (click)="toggleLike(index)" src="../../assets/img/heart-red.png" alt="liked">
       } @else{
-        <img class="hearth" (click)="addLike(index)" src="../../assets/img/heart-black.png" alt="no like">
-         
+        <img class="hearth" (click)="toggleLike(index)" src="../../assets/img/heart-black.png" alt="no like"> 
       }
     {{post.like.length}}</p>
 </section>
