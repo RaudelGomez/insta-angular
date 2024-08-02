@@ -7,5 +7,15 @@
       } @else{
         <img class="hearth" (click)="toggleLike(index)" src="../../assets/img/heart-black.png" alt="no like"> 
       }
-    {{post.like.length}}</p>
+      {{post.like.length}}
+    </p>
+    <div class="comment-container" [ngClass]="{'container-comment-border': (post.comments.length > 0)}">
+      @for (comment of post.comments; track $index) {
+        <p>Kommentar {{$index}}: {{comment}}</p>
+      }
+    </div>
+      <div>
+        <input type="text" [(ngModel)]="commentText"> 
+        <button (click)="addComment(index, commentText)">add Comment</button>
+      </div>
 </section>

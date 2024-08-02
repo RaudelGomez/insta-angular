@@ -11,9 +11,21 @@ section {
 
 .hearth {
 	width: 24px;
+	cursor: pointer;
 }
 
 .like-container {
 	display: flex;
 	align-items: center;
+}
+
+.comment-container{
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	margin-bottom: 8px;
+}
+
+.container-comment-border{
+	border: 1px solid black;
 }

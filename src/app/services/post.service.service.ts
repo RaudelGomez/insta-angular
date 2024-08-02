@@ -12,17 +12,20 @@ export class PostService {
     {
       name: "Hans",
       img: "./assets/img/banana.jpg",
-      like: ["Raudel"]
+      like: ["Raudel"],
+      comments: ["hallo"]
     },
     {
       name: "Mandy",
       img: "./assets/img/orange.jpg",
-      like: ["Pepe", "Robert"]
+      like: ["Pepe", "Robert"],
+      comments: []
     },
     {
       name: "Nadine",
       img: "./assets/img/currant.jpg",
-      like: []
+      like: [],
+      comments: []
     },
   ];
 
@@ -54,6 +57,11 @@ export class PostService {
 
   hasThePostLike(index:number){
     return this.posts[index].like.findIndex(name => name == this.userLogged);
+  }
+
+  addComment(index:number, comment:string){
+    this.posts[index].comments.push(comment);
+    this.posts$.next(this.posts);
   }
 
   
