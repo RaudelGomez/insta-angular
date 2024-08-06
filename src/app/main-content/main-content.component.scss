@@ -1,13 +1,17 @@
 section{
-  article{
-    div{
-      margin-bottom: 16px;
-      p{
-        margin: 2px;
-      }
-      >img{
-        width:200px;
-        height: 200px;
+  div{
+    display: flex;
+    justify-content: space-between;
+    article{
+      div{
+        margin-bottom: 16px;
+        p{
+          margin: 2px;
+        }
+        >img{
+          width:200px;
+          height: 200px;
+        }
       }
     }
   }

@@ -1,9 +1,12 @@
 <section>
-  <article>
-    @for(post of (allPosts$ | async); track post; let index = $index){
-      <app-post [post]="post" [index]="index"></app-post>
-    }
-  </article>
+  <div>
+    <article>
+      @for(post of (allPosts$ | async); track post; let index = $index){
+        <app-post [post]="post" [index]="index"></app-post>
+      }
+    </article>
+    <app-subscribers></app-subscribers>
+  </div>
   <a routerLink="contact">zu contact Link</a>
 </section>
 

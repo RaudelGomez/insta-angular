@@ -1,0 +1,22 @@
+<section>
+  @for(abo of abos.subscribers; track index; let index = $index ){
+    <div class="container">
+      <div>
+        <p>{{abo.name}}</p>
+        
+          @if(abo.followsYou == true){
+            <p class="button">Folgt dir</p>
+          }@else {
+            <p class="button">Folgt dir nicht</p>
+          }
+      </div>
+      <p class="button blue" (click)="abos.changeFollow(index)">
+        @if(abo.followed){
+          Nicht mehr Folgen
+        }@else {
+          Folgen
+        }
+      </p>
+    </div>
+  }
+</section>
