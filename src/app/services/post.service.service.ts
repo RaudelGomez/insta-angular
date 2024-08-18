@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Post } from '../interfaces/post.interface';
-import { BehaviorSubject } from 'rxjs';
+import { BehaviorSubject, Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
@@ -29,17 +29,16 @@ export class PostService {
     },
   ];
 
-  private posts$: BehaviorSubject<Post[]> ;
+  private posts$: BehaviorSubject<Post[]> = new BehaviorSubject<Post[]>(this.posts);
+  allPosts: Observable<Post[]> = this.posts$.asObservable();
 
   private user:string = "Raudel"
 
-  constructor() { 
-    this.posts$ = new BehaviorSubject<Post[]>(this.posts);
-  }
+  constructor() {}
 
-  get allPosts(){
-    return this.posts$.asObservable();
-  }
+  // get allPosts(){
+  //   return this.posts$.asObservable();
+  // }
 
   get userLogged(){
     return this.user;
