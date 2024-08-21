@@ -1,6 +1,6 @@
 <section>
   <div>
-    hi
+    ok
     <article>
       @for(post of (allPosts$ | async); track post; let index = $index){
         <app-post [post]="post" [index]="index"></app-post>
